@@ -149,21 +149,27 @@ nav{background-color: white;
     font-size: 16pt;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
 
+.mainfooter{background-color: #0B1354;
+        height: 27%;
+       position: fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;}
+
+.label{background-color: rgb(245, 125, 217);
+       border-radius: 5px ;
+       height: 12%;
+       position: fixed;
+       bottom: 150px;
+       left: 120px;
+       right: 120px;}
+
         .main-body {
             background-image: url(images/male\ student.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             height: 100vh;}
-
-        .roundup-footer {
-            background: rgb(243, 243, 247); 
-        }
-
-        .roundup-footer p {
-            margin-left: 560px;
-            
-        }
 
         .roundup-link a {
             text-decoration: none;
@@ -395,38 +401,6 @@ margin-top: 15px;
                          height: 50px;
                      
                      }
- 
-                     
- .foot1{
-     margin-top: 30px;
-     padding-left: 27px;
- }
- 
- .foot2{
-     margin-top: 30px;
-     padding-right: 27px;
- }
- 
- .foot-bar a {
-     text-decoration: none;
-     font-size: 12px;
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
-     color: black;
-    line-height: 22px;
- }
- 
- 
- .foot3{
-     margin-left: 80px;
-     
- }
- 
- .foot3 svg {
- display: inline-flex;
- margin-left: 40px;
- color: rgb(16, 15, 15);
- margin-top: 15px;
- }
  
  .roundup-1 {
      margin-left: 70px;
