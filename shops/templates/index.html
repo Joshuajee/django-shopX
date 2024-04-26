@@ -8,14 +8,9 @@
 {% endblock  %}
 
 {% block content %}
-   <div id="product">
 
-    </div>
-  
   <div class="products">
-   
-
-
+  
        
       {% for product in products  %}
         <div class="product">
@@ -25,8 +20,8 @@
             </div>
             <div>
               <p>{{product.name}}</p>
-              <h5>{{product.price}}</h5>
-              <del>{{product.price}}</del>
+              <h5>&#8358;{{product.price}}</h5>
+              <del>&#8358;{{product.price}}</del>
             </div>
           </a>
         </div>

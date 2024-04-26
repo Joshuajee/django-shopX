@@ -12,7 +12,6 @@
     {% block head %}{% endblock  %}
 </head>
 <body>
-    {% block content  %} {% endblock  %}
   
     <nav>
       <a class="logo" href="index.html">
@@ -50,54 +49,22 @@
      <a class="shop" href="/"> Shop </a>
     </nav>
 
+    {% block content  %} {% endblock  %}
 
-
-    <div id="product">
-
-    </div>
 
     <footer class="mainfooter">
-          <footer class="label">
+    
+          <div class="label">
             <p class="ship"><b>Free Shipping</b> when ordering over $100</p> 
             <p class="return"><b>Free Return</b> Get Return within 30 days</p> 
             <p class="pay"><b>Secure Payment</b> 100% Secure Online Payment</p> 
             <p class="quality"><b>Best Quality</b> Original Product Guarenteed </p> 
-          </footer>
+          </div>
       <img class="newlogo" src="{% static '/img/newlogo.png'%}" alt="newlogo" width="180px" height="auto">
       <hr>
 
       <p class="copyR">Copyright © 2024 All rights reserved | All Rights Reserved<p>
-     </footer>
+    </footer>
 
-    <script src="js/shop.js"></script>
-
-    <script>
-
-      const div = document.getElementById("products")
-
-      for (let i=0; i <products.length; i++) {
-
-        const product=products[i]
-
-        div.innerHTML += `
-        <div class="product">
-          <a href="./product.html?id=${product.id}">
-            <div class="image">
-              <img src="${product.image}" alt="" width="80%">
-            </div>
-            <div>
-              <p>${product.name}</p>
-              <h5>#${product.price}</h5>
-              <del>#${parseInt(product.price * 1.2 )}</del>
-            </div>
-          </a>
-        </div>
-          `
-      }
-
-
-    <i class="fas fa-cloud"></i>
-
-    </script>
 </body>
 </html> 
