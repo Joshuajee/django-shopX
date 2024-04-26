@@ -6,8 +6,8 @@
              <h2 class="create"> Create An Account</h2> 
         </div> 
         
-        <form>
-        
+        <form method="post">
+            {% csrf_token %}
             <label for="Username">First Name</label>
             <input type="text" name="first_name"  placeholder="Enter First Name" >
 
@@ -15,14 +15,22 @@
             <input type="text" name="last_name" placeholder="Enter Last Name">
         
             <label for="emailaddress">Email Address</label>
-            <input type="text" name="emailaddress" placeholder="Enter Email Address">
-                
+            <input type="text" name="email" placeholder="Enter Email Address">
+
+            <label for="Phonenumber"> Username</label>
+            <input type="text" name="username" placeholder="Enter Username">      
             
             <label for="Phonenumber"> Phone Number</label>
-            <input type="text" name="phonenumber" placeholder="Enter Phone Number">    
+            <input type="text" name="phone" placeholder="Enter Phone Number">  
+
+            <label for="Phonenumber"> State </label>
+            <input type="text" name="state" placeholder="">  
+
+            <label for="Phonenumber"> Address </label>
+            <input type="text" name="address" placeholder="Enter your address">    
             
             <label for="Password">Password</label>
-            <input type="text" name="Password" placeholder="Enter Password">
+            <input type="text" name="password" placeholder="Enter Password">
     
             <button class="sign">Create An Account</button>
        

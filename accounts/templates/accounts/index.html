@@ -1,13 +1,16 @@
 {% extends "./base.html" %}
-
+{% load static %}
 {% block content %}
-        <form>
-            <label for="Username">Email Address or Phone Number</label>
-            <input type="text" id="Username"  placeholder="Enter First Name" >
+
+        <form method="post">
+            {% csrf_token %}
+            
+            <label for="Username">Username</label>
+            <input type="text" name="username"  placeholder="Enter UserName" >
 
            
             <label for="Password">Password</label>
-            <input type="text" id="Password" placeholder="Enter Password">
+            <input type="text" name="password" placeholder="Enter Password">
     
             <button class="sign">Login</button>
        
@@ -15,7 +18,7 @@
 
 
            </form>
-
+            
            <div class="Account">
 
             <a href="/create">
@@ -23,5 +26,6 @@
             </a>
 
            </div>
+           
 {% endblock %}
      

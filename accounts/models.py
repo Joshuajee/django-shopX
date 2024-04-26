@@ -6,6 +6,7 @@ from django.contrib.auth.models import AbstractUser
 class User(AbstractUser):
     is_vendor = models.BooleanField(default=False) 
     profile_img = models.FileField(upload_to="profiles", blank=True)
+    phone = models.CharField(max_length=15, blank=True)
     
 class Address(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
