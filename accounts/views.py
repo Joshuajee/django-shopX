@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import User
+from .models import User, Address
 from django.contrib.auth import authenticate, login, logout
 
 
@@ -15,17 +15,25 @@ def create_account(req):
         username = req.POST['username']
         email = req.POST['email']
         password = req.POST['password']
+        phone = req.POST['phone']
+        address = req.POST['address']
+        state = req.POST['state']
         
 
         try:
-            User.objects.create_user(
+            user = User.objects.create_user(
                 first_name=first_name,
                 last_name=last_name,
                 username=username,
                 email=email,
-                password=password
-                
-                )
+                password=password,
+                phone = phone
+            )
+
+            Address.objects.create(user=user, state = state, address = address)
+
+            login(req, user)
+
             return HttpResponseRedirect("/")
         except:
             print("error")
@@ -60,5 +68,7 @@ def logout_view(req):
     return HttpResponseRedirect("/")
 
 
+def carts(request):
+    return render(request, "accounts/carts.html")
 
 
