@@ -3,6 +3,11 @@
     margin: 0;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 nav{background-color: white;
     display: flex;
     justify-content: space-between;
@@ -104,15 +109,17 @@ nav{background-color: white;
 
 .cart:hover{ color:rgb(245, 125, 217) ;}
 
-.second{background-color: rgb(245, 125, 217);
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       position: fixed;
+.second{
+    background-color: rgb(245, 125, 217);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
        top: 73px;
        left:0px;
        right: 0px;
-       height: 7%;}
+       height: 7%;
+}
 
 .categories{position: fixed;
             left: 70px;
@@ -149,20 +156,24 @@ nav{background-color: white;
     font-size: 16pt;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
 
-.mainfooter{background-color: #0B1354;
-        height: 32%;
-       position: fixed;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;}
+.mainfooter{
+    background-color: #0B1354;
+    height: 320px;
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-top: 100px;
+}
 
-.label{background-color: rgb(245, 125, 217);
-       border-radius: 5px ;
-       height: 14%;
-       position: fixed;
-       bottom: 180px;
-       left: 120px;
-       right: 120px;}
+.label{
+    background-color: rgb(245, 125, 217);
+    border-radius: 5px ;
+    height: 34%;
+    position: absolute;
+    top: -50px;
+    left: 120px;
+    right: 120px;
+}
 .label p {display: inline;
           color: white;
           font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -199,14 +210,14 @@ nav{background-color: white;
 .newlogo{position: absolute;
         left: 100px;
         bottom: 80px;}
-hr{position: fixed;
+hr{position: absolute;
   bottom: 40px;
   left: 120px;
   right: 120px;
   color: rgb(238, 236, 236);
   height: 0px;}
 
-.copyR{position: fixed;
+.copyR{position: absolute;
        bottom: 17px;
        left: 500px;
        right: 500px;
@@ -248,35 +259,36 @@ hr{position: fixed;
             display: none;
         }
 
-        #products{
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
-            margin:50px ;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+.products{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin:50px ;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 200px;
+}
 
-        .product{
-            display: flex;
-            flex-basis: 250px;
-            min-width: 250px;
-            align-items: center;
-            padding: 20px;
-            padding-left: 30px;
-        }
+.product{
+    display: flex;
+    flex-basis: 250px;
+    min-width: 250px;
+    align-items: center;
+    padding: 20px;
+    padding-left: 30px;
+}
 
-        .product:hover{
-            background-color: #f3f3f7;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            border-radius: 8px;
-            transition: 0.6s;
-        }
+.product:hover{
+    background-color: #f3f3f7;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+    transition: 0.6s;
+}
 
-        .product a {
-            text-decoration: none;
-            color: black;
-        }
+.product a {
+    text-decoration: none;
+    color: black;
+}
 
 
 

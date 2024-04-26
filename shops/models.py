@@ -13,7 +13,7 @@ class Status(models.TextChoices):
 class Product(models.Model):
     name = models.CharField(max_length=150)
     price = models.FloatField()
-    image = models.FileField(upload_to="products")
+    image = models.FileField(upload_to="uploads/products")
     quantity = models.IntegerField()
     description = models.TextField()
     
