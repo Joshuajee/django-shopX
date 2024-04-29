@@ -1,0 +1,31 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+
+        <form method="post">
+            {% csrf_token %}
+            
+            <label for="Username">Username</label>
+            <input type="text" name="username"  placeholder="Enter UserName" >
+
+           
+            <label for="Password">Password</label>
+            <input type="text" name="password" placeholder="Enter Password">
+    
+            <button class="sign">Login</button>
+       
+            <h2 class="p2">Don't have an Account?</h2>
+
+
+           </form>
+            
+           <div class="Account">
+
+            <a href="/create">
+                <button class="login">Create An Account</button>
+            </a>
+
+           </div>
+           
+{% endblock %}
+     

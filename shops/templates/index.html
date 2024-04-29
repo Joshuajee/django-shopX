@@ -1,0 +1,32 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block title %} Shopx | Your One-Stop Destination for all your Shopping Needs. {% endblock  %}
+
+{% block head %}
+ 
+{% endblock  %}
+
+{% block content %}
+
+  <div class="products">
+  
+       
+      {% for product in products  %}
+        <div class="product">
+          <a href="/product/{{product.id}}">
+            <div class="image">
+              <img src="/{{product.image}}" alt="" width="80%">
+            </div>
+            <div>
+              <p>{{product.name}}</p>
+              <h5>&#8358;{{product.price}}</h5>
+              <del>&#8358;{{product.price}}</del>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+     
+    </div> 
+
+{% endblock  %}  
