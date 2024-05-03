@@ -1,10 +1,135 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block head %}
-
+  <link rel="stylesheet" href="{% static 'accounts/css/cart.css' %}">
 {% endblock  %}
 
 {% block content %}
 
+<div class="container">
+        <div class="cart-sum">
+            <h3>CART SUMMARY</h3>
+            <hr>
+            <div id="acc-total">
+                <div id="acc">
+                    <h3>Sub Total</h3>
+                    <p>Delivery Fees not included</p>
+                </div>
+                <div id="cash">
+                <h1>#1,240,000</h1>
+                </div>
+            </div>
+        </div>
+    
+        <div class="media-cart " >
+            <div class="img-dis">
+                <img src="img/1.jpg" alt="" height="50px">
+                <h6>-10%</h6>
+            </div>
+            <div >
+                <h4> LG 43" Inches LED Smart TV (43LM6370) - Black + 2 Year Warranty</h4>
+                <a href="#"><p> Seller: flavihno store</p></a>
+                <div class="price">
+                    <h3>#500,000</h3><h5 id="old-price">#600,000 </h5>
+                </div>
+                <h6 id="units">5 units left </h6>
 
- {% endblock %}
+            </div>
+        </div>
+        <hr>
+        <div class="media-cart" >
+            <div class="img-dis">
+                <img src="img/1 (2).jpg" alt="" height="50px">
+                <h6>-10%</h6>
+            </div>
+            <div>
+                <h4> XIAOMI Redmi A3 6.71" 3GB RAM/64GB ROM Android 12 - Blue In Stock</h4>
+                <a href="#"><p> Seller: flavihno store</p></a>
+                <div class="price">
+                    <h3>#440,000</h3><h5 id="old-price">#540,000 </h5>
+                </div>
+                <h6 id="units">5 units left </h6>
+
+            </div>
+        </div>
+        <div class="media-cart" >
+            <div class="img-dis">
+                <img src="img/1(3).jpg" alt="" height="50px">
+                <h6>-10%</h6>
+            </div>
+            <div>
+                <h4> Sony Computer Entertainment Sony PS Vita (WiFi) Console - Black In Stock</h4>
+                <a href="#"><p> Seller: favour store</p></a>
+                <div class="price">
+                    <h3>#300,000</h3><h5 id="old-price">#400,000 </h5>
+                </div>
+                <h6 id="units">5 units left </h6>
+
+            </div>
+        </div>
+        <nav id="contact">
+            <a href="#"><i class="fa-solid fa-square-phone"></i></a>
+            <a id="payment" href="checkout.html"><button id="checkout"> CHECKOUT (#400,500)  </button></a>
+        </nav>
+   
+
+        <div id="carts">
+            <!-- <h2 id="cart-list">Carts(3)</h2> -->
+            {% comment %} <div class="cart">
+                <div id="group">
+                    <img src="{cart?.image}" alt="Play-station" id="product">
+                    <div id="pro-d">
+                        <h4>
+                            ${cart.name}
+                        </h4>
+                        <a href="#"><p> ${cart.seller}</p></a>
+                    </div>
+                    <div id="current-price">
+                        <h4 id="prc">PRICE : </h4>
+                            <h3>${cart.price}</h3>
+                        <div id="old-price">
+                            <del>#600,000 <del>
+                        </div>
+                    </div>
+                </div>
+                <div id="remove-btn">
+                    <a href="#" title="Remove Item"><button>
+                        <h4>  <img src="img/trash.png" alt="trash"> REMOVE</h4>
+                    </button></a>
+                    <a href="#" title="Double Click to increase base on available items"><button>
+                        <h4 id="num"> <img src="img/checkout.png" alt="checkout"> ORDER(1)</h4>
+                    </button></a>
+                </div>
+            </div>
+            
+            <hr> {% endcomment %}
+
+        
+        </div>
+
+        <div>
+            <div id="cartSUM">
+                <h3>CART SUMMARY</h3>
+                <hr>
+                <div class="acc-total">
+                    <div id="acc">
+                        <h3>Sub Total</h3>
+                        <p>Delivery Fees not included</p>
+                    </div>
+                    <div id="total">
+                    <h1>#400,500</h1>
+                    </div>
+                </div>
+                <hr>
+                <a href="checkout.html"><button id="CHECKOUT"> CHECKOUT(#400,500) </button></a>
+            </div>
+
+            <div class="Returns">
+                <h3>Returns are Easy</h3>
+                <p>Free return within 7 days for ALL eligible items</p>
+                <a href="#">Details</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

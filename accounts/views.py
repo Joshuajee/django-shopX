@@ -1,12 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import User, Address
+from .models import User, Address, Cart
 from django.contrib.auth import authenticate, login, logout
+from shops.models import Order
 
 
 # Create your views here.
-def index(request):
-    return render(request, "accounts/index.html")
+def index(req):
+    return render(req, "accounts/index.html")
 
 def create_account(req):
     if req.method == "POST":
@@ -68,7 +69,16 @@ def logout_view(req):
     return HttpResponseRedirect("/")
 
 
-def carts(request):
-    return render(request, "accounts/carts.html")
+def carts(req):
+    user = req.user
+
+    cart_items = Cart.objects.filter(user=user)
+
+    print(cart_items)
+
+    # user = User.objects.filter(product="product", quantity="quantity")
+    # products  = Product.objects.filter(product="product")
+    return render (req, "accounts/carts.html")
+
 
 

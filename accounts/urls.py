@@ -7,5 +7,5 @@ urlpatterns = [
     path("create", create_account),
     path("login", login_view),
     path("logout", logout_view),
-    path("cart", carts)
+    path("carts", carts)
 ]
