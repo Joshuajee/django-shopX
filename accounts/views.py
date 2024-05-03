@@ -70,6 +70,7 @@ def logout_view(req):
 
 
 def carts(req):
+
     user = req.user
 
     cart_items = Cart.objects.filter(user=user)
@@ -78,7 +79,9 @@ def carts(req):
 
     # user = User.objects.filter(product="product", quantity="quantity")
     # products  = Product.objects.filter(product="product")
-    return render (req, "accounts/carts.html")
+    return render (req, "accounts/carts.html", {
+        "cart_items" : cart_items
+    })
 
 
 
