@@ -9,4 +9,18 @@ def index(req):
                         "products":products})
 
 def product(req, id):
-    return render (req, "index.html") 
+    product_details = Product.objects.get(id=id)
+    print(id)
+    return render (req, "product.html",
+                         {"product":product_details}) 
+
+def about(req):
+    return render (req, "about.html")
+
+def contact(req):
+    return render (req, "contact.html")
+
+def cart(req):
+    return render (req, "cart.html")
+
+

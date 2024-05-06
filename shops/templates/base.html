@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title  %}Shopx|Your One-Stop Destination for all your Shopping Needs.{% endblock  %}</title>
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '/css/product.css' %}">
+    <link rel="stylesheet" href="{% static '/css/footer.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,7 +16,7 @@
 <body>
   
     <nav>
-      <a class="logo" href="index.html">
+      <a class="logo" href="/">
           <img class="logo" src="{% static '/img/shopx.png'%}" alt="logo" width="120px" height="auto">
       </a>
         <div>
@@ -29,13 +31,13 @@
         </div>
         
         <div class="Navlinks">
-              <a class="logins" href="./auth/index.html">Login</a>
-              <a href="./auth/create-account.html"><button class="creates">Create Account</button></a>
-              <a href="./cart.html"><svg class="nav-cart" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <a class="logins" href="/login">Login</a>
+              <a href="/create"><button class="creates">Create Account</button></a>
+              <a href="/cart"><svg class="nav-cart" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
                 <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
                 </svg>
-              <a class="cart" href="./cart.html"> Cart </a>
-               <i class="fas fa-shopping-cart"></i> 
+              <a class="cart" href="./cart"> Cart </a>
+               <!--<i class="fas fa-shopping-cart"></i> --> 
               <span id="cart-count"> 0 </span>
             </a>
         </div>
@@ -44,23 +46,53 @@
      <nav class="second">
      <a class="categories" href="/"> Categories </a>
      <a class="home" href="/"> Home </a>
-     <a class="contact" href="/"> Contact </a>
-     <a class="about" href="/"> About Us </a>
+     <a class="contact" href="/contact"> Contact </a>
+     <a class="about" href="/about"> About Us </a>
      <a class="shop" href="/"> Shop </a>
     </nav>
-
-    {% block content  %} {% endblock  %}
-
+    
+    <main >
+      {% block content  %} {% endblock  %}
+    </main>
 
     <footer class="mainfooter">
     
-          <div class="label">
+         <div class="label">
             <p class="ship"><b>Free Shipping</b> when ordering over $100</p> 
             <p class="return"><b>Free Return</b> Get Return within 30 days</p> 
             <p class="pay"><b>Secure Payment</b> 100% Secure Online Payment</p> 
             <p class="quality"><b>Best Quality</b> Original Product Guarenteed </p> 
           </div>
+      
       <img class="newlogo" src="{% static '/img/newlogo.png'%}" alt="newlogo" width="180px" height="auto">
+      <p class="slogan"> Get the best at shopx!</p>
+      <p class="slog"> Helping customers to find the best products.</p>
+      <p class="slogs">The place to go for all your shopping needs.</p>
+      <div>
+      <p class="link">QUICK LINKS</p>
+          <a class="cat" href="/"> Categories </a>
+          <a class="homepage" href="/"> Home </a>
+          <a class="contacts" href="/contact"> Contact </a>
+          <a class="aboutus" href="/about"> About Us </a>
+          <a class="shop_now" href="/"> Shop </a>
+      </div>
+      
+      <div>
+       <p class="acc">ACCOUNT</p>
+       <a class="user_dash" href="/">My Account</a>
+       <a class="checkout" href="/">Checkout</a>
+       <a class="cart_shortcut" href="/cart">Cart</a>
+
+      </div>
+      
+      <div class="footer__social">
+          <p class="social"> SOCIAL MEDIA</p>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    
       <hr>
 
       <p class="copyR">Copyright © 2024 All rights reserved | All Rights Reserved<p>
