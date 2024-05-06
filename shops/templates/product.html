@@ -4,9 +4,36 @@
 {% block title %} Shopx | Your One-Stop Destination for all your Shopping Needs. {% endblock  %}
 
 {% block head %}
-     <link rel="stylesheet" href="{% static '/css/product.css' %}">
+      <link rel="stylesheet" href="{% static '/css/product.css' %}"> 
+     <link rel="stylesheet" href="{% static '/css/footer.css' %}">
 {% endblock  %}
 
 {% block content %}
+
+
+
+        <div class="product">
+          <a href="/product/{{product.id}}">
+            <div class="image">
+              <img src="/{{product.image}}" alt="" width="80%">
+            </div>
+
+               <div>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <p class="product_name">{{product.name}}</p>
+                    <del class="old_price">&#8358;{{product.price|add:"10"}}</del>
+                    <h5 class="new_price">&#8358;{{product.price}}</h5>
+                    <p>{{product.quantity}}</p>
+               </div>
+               
+               <div>
+                    <p>{{product.description}}</p>
+               </div>
+        </div>
+
 
 {% endblock  %}  
