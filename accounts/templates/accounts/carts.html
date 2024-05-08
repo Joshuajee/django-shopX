@@ -75,20 +75,21 @@
 
         <div id="carts">
             <!-- <h2 id="cart-list">Carts(3)</h2> -->
-            {% comment %} <div class="cart">
+            {% for cart in cart_items %}
+
                 <div id="group">
-                    <img src="{cart?.image}" alt="Play-station" id="product">
+                    <img src="{{cart.product.image}}" alt="Play-station" id="product">
                     <div id="pro-d">
                         <h4>
-                            ${cart.name}
+                            {{cart.name}}
                         </h4>
-                        <a href="#"><p> ${cart.seller}</p></a>
+                        <a href="#"><p> {{cart.seller}}</p></a>
                     </div>
                     <div id="current-price">
                         <h4 id="prc">PRICE : </h4>
-                            <h3>${cart.price}</h3>
+                            <h3>{{cart.price}}</h3>
                         <div id="old-price">
-                            <del>#600,000 <del>
+                            <del> #600,000 <del>
                         </div>
                     </div>
                 </div>
@@ -100,12 +101,13 @@
                         <h4 id="num"> <img src="img/checkout.png" alt="checkout"> ORDER(1)</h4>
                     </button></a>
                 </div>
-            </div>
+    
+            <hr> 
             
-            <hr> {% endcomment %}
-
+            {% endfor %}
         
         </div>
+
 
         <div>
             <div id="cartSUM">
