@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import User, Address, Cart
 from django.contrib.auth import authenticate, login, logout
-from shops.models import Order
+
 
 
 # Create your views here.
@@ -83,5 +83,12 @@ def carts(req):
         "cart_items" : cart_items
     })
 
+def order(req):
 
+    user = req.user
+
+    order_items =Order.objects.filter(user=user)
+    return render(req, "account/orders.html", {
+        "order_items" : order_items
+    })
 
