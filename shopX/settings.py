@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q1igz(9ktxw8-gpqgiq*)!#8mo-31k-enc7he)z^cm@dt$o-fw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG")
+DEBUG = bool(os.getenv("DEBUG"))
 
 ALLOWED_HOSTS = [os.getenv("ALLOWED_HOSTS")]
 
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'shopX.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-if os.getenv("DEBUG") == True:
+if DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Status, Product, Review, Order
+from accounts.models import Cart
 
 
 # Create your views here.
@@ -23,4 +24,42 @@ def contact(req):
 def cart(req):
     return render (req, "cart.html")
 
+def addtocart(req):
+    user = req.user
+    quantity = req.POST["no_of_items"]
+    
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    #  if req.method == "POST":
+    #     username=req.POST["username"]
+    #     password=req.POST["password"]
+
+    #     try:
+    #         user= authenticate(username=username, password=password)
+
+    #         if user == None:
+    #             return render(req, "accounts/index.html"), {
+    #                 'error' : "wrong username or password"
+    #             }
+    #         else:
+    #             login(req, user)
+    #             return HttpResponseRedirect("/")
+    #     except:
+    #         pass
+
+    # return render(req, "accounts/index.html")
+    
 
