@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import User, Address, Cart
 from django.contrib.auth import authenticate, login, logout
+from shops.models import Order
 
 
 
@@ -44,7 +45,7 @@ def create_account(req):
 
 
 def login_view(req):
-
+    print(req.user)
     if req.method == "POST":
         username=req.POST["username"]
         password=req.POST["password"]
@@ -87,7 +88,7 @@ def order(req):
 
     user = req.user
 
-    order_items =Order.objects.filter(user=user)
+    order_items = Order.objects.filter(user=user)
     return render(req, "account/orders.html", {
         "order_items" : order_items
     })

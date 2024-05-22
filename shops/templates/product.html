@@ -39,11 +39,14 @@
                     <hr class="second_line">
 
                     <h3 class="quan">Quantity</h3>
+
                     <form method="post" action="/addtocart">
-                    <input class="num" name="no_of_items"  type="number"  placeholder="0">
-                    <button class="add_to_cart" href="./cart">Add To Cart</button>
+                      {% csrf_token %}
+                         <input  name="product"  type="hidden" value="{{product.id}}">
+                         <input class="num" name="no_of_items" value="1"  type="number"  placeholder="0">
+                         <button class="add_to_cart" href="./cart">Add To Cart</button>
                     </form>
-                    <a ><button class="buy_now">Buy Now</button></a>
+                    <a  href="/checkout" ><button class="buy_now">Buy Now</button></a>
                </div>
                
               
