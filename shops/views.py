@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import Status, Product, Review, Order
 from accounts.models import Cart
+from django.http import HttpResponse, HttpResponseRedirect
+
 
 
 # Create your views here.
@@ -25,8 +27,20 @@ def cart(req):
     return render (req, "cart.html")
 
 def addtocart(req):
+    productid = req.POST["product"]
+    product = Product.objects.get(id=productid)
     user = req.user
     quantity = req.POST["no_of_items"]
+    Cart.objects.create(user=user, quantity=quantity, product=product)
+
+    return HttpResponseRedirect("account/carts")
+def order(req):
+    return render (req, "order.html")
+
+def checkout(req):
+    return render (req, "checkout.html")
+
+    
     
    
    
