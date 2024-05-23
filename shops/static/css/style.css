@@ -107,11 +107,15 @@ nav{background-color: white;
 
 .cart{position: fixed;
       right: 110px;
-      top: 23px;
+      top: 31px;
       text-decoration: none;
       color: black;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       font-size: 12pt;}
+
+.cart_error{font-size: 48pt ;
+            color: black;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
 
 .cart:hover{ color:rgb(245, 125, 217) ;}
 
