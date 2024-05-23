@@ -69,7 +69,7 @@ input:hover, input:focus {
 .sign{
     font-size: medium;
     color: white;
-    background-color: #f68b1e;
+    background-color: rgb(245, 125, 217);
     text-align: center;
     padding: 10px;
     border: none;
@@ -119,10 +119,10 @@ h1 {
 .login {
     font-size: larger;
     padding: 10px;
-    color:#f68b1e;
+    color:rgb(245, 125, 217);
     background-color: lightgray;
     width: 100%;
-    border-color: #f68b1e;
+    border-color: rgb(245, 125, 217);
     border-radius: 2px;
     
 }

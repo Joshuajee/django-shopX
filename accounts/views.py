@@ -89,7 +89,7 @@ def order(req):
     user = req.user
 
     order_items = Order.objects.filter(user=user)
-    return render(req, "account/orders.html", {
+    return render(req, "order.html", {
         "order_items" : order_items
     })
 
