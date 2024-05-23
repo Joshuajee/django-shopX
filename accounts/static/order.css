@@ -189,14 +189,14 @@ body{
 
 #modify-cart a {
     text-decoration: none;
-    color: #f5891d;
+    color: rgb(245, 125, 217);
     padding: 8px;
     border-radius: 5px;
    
 }
 
 #modify-cart a:hover{
-    background-color:#f5891d56;
+    background-color:rgb(245, 125, 217);
 }
 
 .payment{
@@ -267,7 +267,7 @@ body{
 .SUM input{
     height: 50px;
     text-indent: 50px;
-    border:1px solid #f5891d;
+    border:1px solid rgb(245, 125, 217);
     outline: none;
 }
 
@@ -290,7 +290,7 @@ body{
 }
 
 .Summary #confirm{
-    background-color:#f5891d;
+    background-color:rgb(245, 125, 217);
     border: none;
     outline:none;
     padding: 15px;
